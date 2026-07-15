@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Princess 👑</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Premium Loading Screen -->
+    <div id="loader" class="screen active">
+        <div class="heart-loader">❤️</div>
+        <p>Creating something magical for you...</p>
+    </div>
+
+    <!-- Background Elements (Night Sky, Stars, Clouds, Moon) -->
+    <div class="sky-bg">
+        <div class="moon"></div>
+        <div id="stars-container"></div>
+        <div id="shooting-stars-container"></div>
+        <div class="cloud cloud1">☁️</div>
+        <div class="cloud cloud2">☁️</div>
+    </div>
+    
+    <!-- Floating Canvas for Petals/Hearts/Rain -->
+    <div id="animation-layer"></div>
+
+    <!-- Background Music Element (Optional) -->
+    <!-- Add your audio file named 'music.mp3' in the same folder -->
+    <audio id="bg-music" src="music.mp3" loop></audio>
+
+    <!-- 2. Welcome Screen & Start Surprise Button -->
+    <div id="welcome-screen" class="screen">
+        <div class="glass-card">
+            <h1>Welcome, My Princess 👑</h1>
+            <p>I have built a small universe of surprises just for you. Ready to explore it?</p>
+            <button id="start-btn" class="btn">Start Surprise ✨</button>
+        </div>
+    </div>
+
+    <!-- 3. The Interactive Proposal Screen (Running NO Button) -->
+    <div id="proposal-screen" class="screen">
+        <div class="glass-card">
+            <h2>Will you be mine forever? 💖</h2>
+            <div class="balloon-container">🎈🎈</div>
+            <div class="btn-group">
+                <button id="yes-btn" class="btn">YES! 💍</button>
+                <button id="no-btn" class="btn btn-no">NO 😢</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Birthday & Celebration Screen (Gift, Cake, Wish) -->
+    <div id="celebration-screen" class="screen">
+        <div class="glass-card">
+            <h2>A Special Gift For You! 🎁</h2>
+            <div id="gift-box" class="interactive-item">🎁</div>
+            
+            <div id="cake-container" class="hidden">
+                <div class="cake">🎂</div>
+                <div id="candle" class="candle">🕯️<span class="flame">🔥</span></div>
+                <button id="wish-btn" class="btn">Blow & Make A Wish 💗</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Main Features Dashboard -->
+    <div id="main-dashboard" class="screen">
+        
+        <!-- 100 Reasons Why You're Special -->
+        <div class="glass-card reason-section">
+            <h3>Why You Are Special 💕</h3>
+            <div class="card-flip-container" id="reason-card">
+                <div class="card-inner">
+                    <div class="card-front">Click to see Reason #1</div>
+                    <div class="card-back" id="reason-text">You have the most beautiful smile. ✨</div>
+                </div>
+            </div>
+            <button id="next-reason-btn" class="btn-sm">Next Reason ➡️</button>
+        </div>
+
+        <!-- Love Meter -->
+        <div class="glass-card">
+            <h3>Our Love Meter ❤️</h3>
+            <div class="meter-bar"><div id="meter-fill"></div></div>
+            <div id="meter-status">0%</div>
+            <button id="test-love-btn" class="btn-sm">Calculate Love ⚡</button>
+        </div>
+
+        <!-- Memory Jar -->
+        <div class="glass-card">
+            <h3>Memory Jar 🫙</h3>
+            <p>Tap the jar to pull out a sweet note!</p>
+            <div id="memory-jar" class="interactive-item">🫙</div>
+            <div id="jar-message" class="note-popup"></div>
+        </div>
+
+        <!-- Wish Tree -->
+        <div class="glass-card">
+            <h3>The Wish Tree 🌳</h3>
+            <p>Touch the tree to light it up and release wishes!</p>
+            <div id="wish-tree" class="interactive-item">🌳</div>
+        </div>
+
+        <!-- Photo Gallery Stack (Bonus Feature) -->
+        <div class="glass-card">
+            <h3>Our Memories 📸</h3>
+            <div class="gallery-grid">
+                <!-- Replace 'pic1.jpg' etc. with real image filenames later if you want -->
+                <div class="photo-frame">🖼️</div>
+                <div class="photo-frame">🖼️</div>
+                <div class="photo-frame">🖼️</div>
+            </div>
+        </div>
+
+        <button id="final-trigger-btn" class="btn">The Final Surprise 💌</button>
+    </div>
+
+    <!-- 6. Secret Letter & Final Ending Screen -->
+    <div id="final-screen" class="screen">
+        <div class="glass-card letter-card">
+            <h2>YOU ARE MY PRINCESS 👑</h2>
+            <div class="letter-icon">💌</div>
+            <div class="personal-message">
+                <p><strong>My Dearest,</strong></p>
+                <p>This is my personal message to you. Out of billions of people in this world, you are the one who makes my life beautiful. Thank you for just being you. 💖</p>
+            </div>
+            <button id="end-btn" class="btn">Thank You Screen ❤️</button>
+        </div>
+    </div>
+
+    <!-- 7. Thank You Screen -->
+    <div id="thank-you-screen" class="screen">
+        <div class="glass-card">
+            <h1>Thank You for Coming into My Life! 🌹</h1>
+            <p>Forever & Always. Yours.</p>
+            <div style="font-size: 3rem; margin-top: 15px;">💖</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
